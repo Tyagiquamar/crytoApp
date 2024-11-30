@@ -209,7 +209,7 @@ const Item = React.memo(({ title, value }) => (
   </HStack>
 ));
 
-const CustomBar = ({ high, low }) => (
+const CustomBar = React.memo(({ high, low }) => (
   <VStack w={"full"}>
     <Progress value={50} colorScheme={"teal"} w={"full"} />
     <HStack justifyContent={"space-between"} w={"full"}>
@@ -218,6 +218,6 @@ const CustomBar = ({ high, low }) => (
       <Badge children={high} colorScheme={"green"} />
     </HStack>
   </VStack>
-);
+));
 
 export default CoinDetails;
