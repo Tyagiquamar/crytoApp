@@ -200,14 +200,14 @@ const CoinDetails = () => {
   );
 };
 
-const Item = ({ title, value }) => (
+const Item = React.memo(({ title, value }) => (
   <HStack justifyContent={"space-between"} w={"full"} my={"4"}>
     <Text fontFamily={"Bebas Neue"} letterSpacing={"widest"}>
       {title}
     </Text>
     <Text>{value}</Text>
   </HStack>
-);
+));
 
 const CustomBar = ({ high, low }) => (
   <VStack w={"full"}>
