@@ -3,7 +3,7 @@ import { Heading, Image, Text, VStack } from "@chakra-ui/react";
 import React from "react";
 
 
-const CoindataCard = ({ id, name, img, symbol, price, currencySymbol = "₹" }) => (
+const CoindataCard = React.memo(({ id, name, img, symbol, price, currencySymbol = "₹" }) => (
     <VStack
         w={"52"}
         shadow={"lg"}
@@ -32,7 +32,7 @@ const CoindataCard = ({ id, name, img, symbol, price, currencySymbol = "₹" }) 
         <Text noOfLines={1}>{name}</Text>
         <Text noOfLines={1}>{price ? `${currencySymbol}${price}` : "NA"}</Text>
     </VStack>
-);
+));
 
 
 export default CoindataCard;
